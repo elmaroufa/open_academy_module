@@ -4,7 +4,7 @@
 
     'summary': """
         special module abbo""",
-    'sequence' : 4,
+    'sequence' : 6,
 
     'description': """
         Long description of module's purpose
