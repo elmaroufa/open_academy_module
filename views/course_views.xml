@@ -2,9 +2,9 @@
   <data>
     <!-- explicit list view definition -->
 
-    <record model="ir.ui.view" id="open_academy.list">
+    <record model="ir.ui.view" id="opencademy.list">
       <field name="name">open academy list</field>
-      <field name="model">open_academy.course</field>
+      <field name="model">openacademy.course</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
@@ -16,7 +16,7 @@
     <!-- form openacademy-->
     <record model="ir.ui.view" id="course_form_view">
      <field name="name">course.form</field>
-      <field name="model">open_academy.course</field>
+      <field name="model">openacademy.course</field>
       <field name="arch" type="xml">
       <form string="Form Course">
        <sheet>
@@ -31,7 +31,7 @@
 
 <record model="ir.ui.view" id="open_academy.search">
       <field name="name">course.search</field>
-      <field name="model">open_academy.course</field>
+      <field name="model">openacademy.course</field>
       <field name="arch" type="xml">
         <search>
           <field name="name"/>
@@ -43,25 +43,25 @@
 
     <record model="ir.actions.act_window" id="course_list_action">
       <field name="name">courses</field>
-      <field name="res_model">open_academy.course</field>
+      <field name="res_model">openacademy.course</field>
       <field name="view_mode">tree,form</field>
     </record>
 
 
     <!-- Top menu item -->
 
-    <menuitem name="openacademy Main" id="open_academy.menu_root"/>
+    <menuitem name="openacademy Main" id="openacademy.menu_root"/>
 
     <!-- menu categories -->
 
-    <menuitem name="Course Show" id="open_academy.menu_1" parent="open_academy.menu_root"/>
-    <menuitem name="Course Display" id="open_academy.menu_2" parent="open_academy.menu_root"/>
+    <menuitem name="Course Show" id="openacademy.menu_1" parent="openacademy.menu_root"/>
+    <menuitem name="Course Display" id="openacademy.menu_2" parent="openacademy.menu_root"/>
 
     <!-- actions -->
 
-    <menuitem name="Show List" id="open_academy.menu_1_list" parent="open_academy.menu_1"
+    <menuitem name="Show List" id="openacademy.menu_1_list" parent="openacademy.menu_1"
               action="course_list_action"/>
-    <menuitem name="DIsplay List" id="open_academy" parent="open_academy.menu_2"
+    <menuitem name="DIsplay List" id="openacademy,menu_2_list" parent="openacademy.menu_2"
               action="course_list_action"/>
 
   </data>
