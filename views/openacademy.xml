@@ -2,7 +2,7 @@
   <data>
     <!-- explicit list view definition -->
 
-    <record model="ir.ui.view" id="opencademy.list">
+    <record model="ir.ui.view" id="course_tree_view">
       <field name="name">open academy list</field>
       <field name="model">openacademy.course</field>
       <field name="arch" type="xml">
@@ -29,7 +29,7 @@
       </field>
     </record>
 
-<record model="ir.ui.view" id="openacademy.search">
+<record model="ir.ui.view" id="course_search_view">
       <field name="name">course.search</field>
       <field name="model">openacademy.course</field>
       <field name="arch" type="xml">
@@ -54,19 +54,19 @@
 
     <!-- Top menu item -->
 
-    <menuitem name="openacademy Main" id="openacademy.menu_root"/>
+    <menuitem name="openacademy Main"  id="main_openacademy_menu"/>
 
     <!-- menu categories -->
 
-    <menuitem name="Course Show" id="openacademy.menu_1" parent="openacademy.menu_root"/>
-    <menuitem name="Course Display" id="openacademy.menu_2" parent="openacademy.menu_root"/>
+    <menuitem name="Course Show" id="openacademy_menu"  parent="main_openacademy_menu"/>
+   <!-- <menuitem name="Course Display" id="openacademy.menu_2" parent="openacademy.menu_root"/> -->
 
     <!-- actions -->
 
-    <menuitem name="Show List" id="openacademy.menu_1_list" parent="openacademy.menu_1"
+    <menuitem name="Show List" id="courses_menu"  parent="openacademy_menu"
               action="course_list_action"/>
-    <menuitem name="Display List" id="openacademy,menu_2_list" parent="openacademy.menu_2"
-              action="course_list_action"/>
+   <!-- <menuitem name="Display List" id="openacademy,menu_2_list" parent="openacademy.menu_2"
+              action="course_list_action"/> -->
 
   </data>
 </odoo>
