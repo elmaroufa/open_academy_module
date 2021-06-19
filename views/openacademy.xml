@@ -54,19 +54,19 @@
 
     <!-- Top menu item -->
 
-    <menuitem name="openacademy Main"  id="main_openacademy_menu"/>
+    <menuitem name="OpencAdemy Main"  id="main_openacademy_menu"
+        groups="group_openacademy_manager" />
 
     <!-- menu categories -->
 
-    <menuitem name="Course Show" id="openacademy_menu"  parent="main_openacademy_menu"/>
-   <!-- <menuitem name="Course Display" id="openacademy.menu_2" parent="openacademy.menu_root"/> -->
+    <menuitem name="Course Show" id="openacademy_menu"  parent="main_openacademy_menu"
+      groups="group_openacademy_manager"/>
+    
 
     <!-- actions -->
 
     <menuitem name="Show List" id="courses_menu"  parent="openacademy_menu"
-              action="course_list_action"/>
-   <!-- <menuitem name="Display List" id="openacademy,menu_2_list" parent="openacademy.menu_2"
-              action="course_list_action"/> -->
-
+               groups="group_openacademy_manager"  action="course_list_action"/>
+    
   </data>
 </odoo>
