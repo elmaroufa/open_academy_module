@@ -59,14 +59,12 @@
 
     <!-- menu categories -->
 
-    <menuitem name="Course Show" id="openacademy_menu"  parent="main_openacademy_menu"
-      groups="group_openacademy_manager"/>
-    
+    <menuitem name="Course Show" id="openacademy_menu" groups="group_openacademy_manager"
+     parent="main_openacademy_menu" />
 
     <!-- actions -->
-
     <menuitem name="Show List" id="courses_menu"  parent="openacademy_menu"
-               groups="group_openacademy_manager"  action="course_list_action"/>
+               groups="group_openacademy_manager"  action="course_list_action" />
     
   </data>
 </odoo>
