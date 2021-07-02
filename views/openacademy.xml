@@ -67,4 +67,23 @@
                groups="group_openacademy_manager"  action="course_list_action" />
     
   </data>
+
+  <!-- session view-->
+
+  <record model="ir.ui.view" id="session_form_view">
+    <field name="name">session.form</field>
+    <field name="model">openacademy.session</field>
+    <field name="arch" type="xml">
+      <form string="form view">
+        <sheet>
+          <group>
+            <field name="name" />
+            <field name="start_date" />
+            <field name="duration" />
+            <field name="seats" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
 </odoo>

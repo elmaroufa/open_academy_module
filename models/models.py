@@ -14,3 +14,13 @@ class Course(models.Model):
 #     def _value_pc(self):
 #         for record in self:
 #             record.value2 = float(record.value) / 100
+
+
+class Session(models.Model):
+    _name = 'openacademy.session'
+    _description = 'Session open academy'
+
+    name = fields.Char(required = True)
+    start_date = fields.Date()
+    duration = fields.Float(digits = (6,3), help="duration in day")
+    seats = fields.Integer(string="number of seats")
