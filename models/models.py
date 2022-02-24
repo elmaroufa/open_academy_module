@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from odoo import models, fields
 
 
@@ -9,7 +8,9 @@ class Course(models.Model):
 
     name = fields.Char(string="Title", required = True, help="Course name")
     description = fields.Text(string="Description course")
-
+    responsible_id = fields.Many2one('res.users', string="Responsible", ondelete="set null", index=True)
+    session_ids = fields.One2many('openacademy.session', \
+        'course_id', string='Session')
 #     @api.depends('value')
 #     def _value_pc(self):
 #         for record in self:
@@ -24,3 +25,5 @@ class Session(models.Model):
     start_date = fields.Date()
     duration = fields.Float(digits = (6,3), help="duration in day")
     seats = fields.Integer(string="number of seats")
+    instructor_id = fields.Many2one("res.partner", string="Instructor")
+    course_id = fields.Many2one("openacademy.course", ondelete="cascade", required=True)
