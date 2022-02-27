@@ -4,14 +4,11 @@
 
     'summary': """
         special module abbo""",
-    'sequence' : 6,
-
     'description': """
         Long description of module's purpose
     """,
 
     'author': "ABBO SALY",
-    'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml
