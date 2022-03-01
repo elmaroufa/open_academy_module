@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields
+from odoo import models, fields 
 
 
-class Course(models.Model):
-    _name = 'openacademy.course'
-    _description = 'Open Academy course'
+class LibraryBook(models.Model):
+    _name = 'library.book'
+    _description = 'Library book'
 
-    name = fields.Char(string="Title", required = True, help="Course name")
+    name = fields.Char(string="Title", required = True, help="Book name")
     description = fields.Text(string="Description course")
     responsible_id = fields.Many2one('res.users', string="Responsible", ondelete="set null", index=True)
     session_ids = fields.One2many('openacademy.session', \
